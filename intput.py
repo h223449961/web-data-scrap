@@ -106,13 +106,13 @@ for div in divs:
     for t in ts:
         count = count+1
         tex.append(t.get_text())
+        if(op.contains(t.get_text(), "五辛")):
+            count=count-1.5
     vetype = ' '.join([str(elem) for elem in tex])
     if(count==0):
         count=0.9
-    if(op.contains(t.get_text(), "五辛")):
-        count=count-1.5
-    #print("可配合： "+vetype)
-    #print('可配合多少素食類別加權分： '+ str(count))
+    print("可配合： "+vetype)
+    print('可配合多少素食類別加權分： '+ str(count))
     '''
     全勤加權分
     '''
